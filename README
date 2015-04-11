@@ -1,0 +1,12 @@
+Signing data is a powerful way to deter bad actors from tampering with data. 
+It bases itself off of cryptographically secure hash functions using a secret 
+key as a salt for the data. 
+
+When the user makes a request, first check to see if the payload matches the 
+signature and if not destroy the user’s cookie.
+
+This is a simple web service that has two resources ­­ one to generate a checksummed 
+callback URL and the second to take a callback URL and verify the checksum. 
+
+The code is generic to handle any set of parameters on the callback URL and still 
+provide a correct checksum.
